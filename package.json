@@ -1,0 +1,21 @@
+{
+  "name": "euroexpress-profitability-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build --clean && tsc && npm run compile",
+    "compile": "pkg . -t node16-win-x64 -o bin/euroexpress-profitability-calculator --compress GZip",
+    "compile-dbg": "pkg . -t node16-win-x64 -o bin/euroexpress-profitability-calculator --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.16"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "bin": "./build/main.js"
+}
